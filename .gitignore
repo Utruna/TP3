@@ -1,0 +1,5 @@
+.vscode
+*.o
+*.d
+app.exe
+makefile
