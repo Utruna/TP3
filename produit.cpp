@@ -27,3 +27,17 @@ void Produit::updateQuantite(int nouvelleQuantite) {
 void Produit::updatePrix(float nouveauPrix) {
     _prix = nouveauPrix;
 }
+
+void Produit::afficherProduit() {
+    std::cout << "nom : " << _nom << ", description : " << _description << ", prix " << _prix  << " euro" << std::endl;
+}
+
+std::ostream& operator<<(std::ostream& os, const Produit& produit) {
+    os << "nom : " << produit.affichenom() << ", description : " << produit.affichedescription() << ", quantite : " << produit.affichequantite() << ", prix : " << produit.afficheprix() << " euro" << std::endl;
+    return os;
+}
+
+void Produit::updateQuantitevoulu(int nouvelleQuantitevoulu) {
+    _quantitevoulu = nouvelleQuantitevoulu;
+    _quantite = _quantite-nouvelleQuantitevoulu;
+}

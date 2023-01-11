@@ -1,5 +1,4 @@
 #include<iostream>
-#include "produit.h"
 #include "client.h"
 
 int main() {
@@ -12,13 +11,20 @@ int main() {
 	p.updatePrix(20.50);
 	std::cout << p.affichequantite() << std::endl;
 	std::cout << p.afficheprix() << std::endl;
+	std::cout << p ;
 
-
+	Produit p2("Produit 2", "Description 2", 20, 20.5);
+	Produit p3("Produit 3", "Description 3", 30, 30.5);
 	Client c("Nom", "Prenom");
-	c.updatePannier("Produit 1");
-	c.updatePannier("Produit 2");
-	c.updatePannier("Produit 3");
+	c.updatePannier(p,1);
+	c.updatePannier(p2,4);
+	c.updatePannier(p3,1);
+	c.afficherClient();	
 	c.voirPannier();
+	c.modifierQuantiteProduit(p2, 5);
+	c.voirPannier();
+	
+
 	
 	return 0;
 }

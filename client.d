@@ -1,1 +1,1 @@
-client.o: client.cpp client.h
+client.o: client.cpp client.h produit.h
