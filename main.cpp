@@ -17,14 +17,16 @@ int main() {
 	Produit p3("Produit 3", "Description 3", 30, 30.5);
 	Client c("Nom", "Prenom");
 	c.updatePannier(p,1);
-	c.updatePannier(p2,4);
+	c.updatePannier(p2,10);
 	c.updatePannier(p3,1);
-	c.afficherClient();	
+	//c.afficherClient();	
+	//c.voirPannier();
+	//p2.affichequantite();
+	c.modifierQuantiteProduit(p2, 8);
 	c.voirPannier();
-	c.modifierQuantiteProduit(p2, 5);
+	std::cout << p2 << std::endl;
+	c.retirerProduit(p2);
 	c.voirPannier();
-	
-
 	
 	return 0;
 }

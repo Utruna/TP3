@@ -38,6 +38,12 @@ std::ostream& operator<<(std::ostream& os, const Produit& produit) {
 }
 
 void Produit::updateQuantitevoulu(int nouvelleQuantitevoulu) {
-    _quantitevoulu = nouvelleQuantitevoulu;
-    _quantite = _quantite-nouvelleQuantitevoulu;
+    if (_quantite-nouvelleQuantitevoulu>0) {
+        _quantitevoulu = nouvelleQuantitevoulu;
+        _quantite = _quantite-nouvelleQuantitevoulu;
+    }
+    else {
+        std::cout << "la quantite demandee est superieure a la quantite disponible" << std::endl;
+    }
+    
 }

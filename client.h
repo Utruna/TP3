@@ -7,11 +7,12 @@ class Client {
         Client(std::string nom, std::string prenom);
         std::string prenom() const;
         std::string nom() const;
-        void updatePannier(Produit produitAAjouter, int quantite);
+        void updatePannier(Produit &produitAAjouter, int quantite);
         void voirPannier();
         void afficherClient();
         void viderpannier();
-        void modifierQuantiteProduit(Produit produitAAjouter, int quantite);
+        void modifierQuantiteProduit(Produit &produitAAjouter, int quantite);
+        void retirerProduit(Produit &produitARetirer);
 
     private:
         std::vector<Produit> _pannier;
