@@ -1,6 +1,5 @@
 #include<iostream>
 #include "magasin.h"
-#include "commande.h"
 
 int main() {
 
