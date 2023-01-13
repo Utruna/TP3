@@ -16,7 +16,8 @@ std::vector<Produit> Commande::produits() const{
 bool Commande::delivered() const{
     return _delivered;
 }  
-
+/*
 std::ostream& operator<<(std::ostream& os, const Commande& commande) {
     os << commande.client() << " a commande " << commande.produits() << " et la commande est " << commande.delivered() << std::endl;
 }
+*/

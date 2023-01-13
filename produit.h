@@ -1,5 +1,3 @@
-#ifndef produit_H
-#define produit_H
 #include<iostream>
 #include "magasin.h"
 
@@ -22,4 +20,3 @@ class Produit {
         int _quantitevoulu = 0;
 };
 std::ostream& operator<<(std::ostream& os, const Produit& produit);
-#endif

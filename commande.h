@@ -1,6 +1,3 @@
-#ifndef commande_H
-#define commande_H
-
 #include <iostream>
 #include <vector>
 #include "client.h"
@@ -20,4 +17,3 @@ class Commande {
 };
 std::ostream& operator<<(std::ostream& os, const Commande& commande);
 
-#endif
