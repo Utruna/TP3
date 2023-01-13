@@ -2,8 +2,8 @@
 #include<vector>
 #include "client.h"
 
-Client::Client(std::string nom, std::string prenom):
-    _nom(nom), _prenom(prenom) {
+Client::Client(std::string nom, std::string prenom, int id):
+    _nom(nom), _prenom(prenom), _id(id) {
     }
 
 std::string Client::prenom() const {
@@ -12,6 +12,10 @@ std::string Client::prenom() const {
 
 std::string Client::nom() const {
     return _nom;
+}
+
+std::string Client::id(){
+  return _id;
 }
 
 void Client::updatePannier(Produit &produitAAjouter, int quantite) {

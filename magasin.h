@@ -14,6 +14,14 @@ class Magasin {
         void affichFullProduit();
         void affichProduit(std::string produit);
         void updateStockProduit(Produit produit, int quantite);
+        void affichFullClients();
+        void affichClient(std::string client);
+        void deletProduitPannier(Produit produit);
+        void modifpannierclient(Client &client, Produit &produit, int quantite);
+        void mettreAJourLaCommande(Commande &commande, bool valider);
+        void ValiderLaCommande(Commande &commande);
+        void affichFullCommandes();
+        void affichCommandesClients(Client client);
       
     private:
         std::vector<Client> _clients;

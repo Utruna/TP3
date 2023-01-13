@@ -32,6 +32,21 @@ void Magasin::affichProduit(std::string produit){
     
 }
 
+void deletProduitPannier(Client &client, Produit &produit) {
+      std::vector<Produit> _pannier = client.pannier();
+      std::vector<Produit> _pannier2 = _pannier;
+    for (auto i = _pannier.begin(); i != _pannier.end(); i++) {
+        if (i->nom() == produit.nom()) {
+            produit.updateQuantite(produit.quantite()+1);
+        }
+        else {
+            _pannier2.push_back(*(i));
+        }
+    }
+    _pannier=_pannier2;
+}
+
+
 void Magasin::updateStockProduit(Produit produit, int quantite){
     int j = 0;
    for (auto i = _produits.begin(); i != _produits.end(); i++)
@@ -41,5 +56,56 @@ void Magasin::updateStockProduit(Produit produit, int quantite){
             _produits[j].updateQuantite(quantite);
         }
     j++;    
+    }
+}
+
+void Magasin::affichFullClients(){
+   for (auto i = _clients.begin(); i != _clients.end(); i++)
+    {
+        Client client = *i;
+        client.afficherClient();
+    }  
+}
+
+void Magasin::affichClient(std::string client){
+  for (auto i = _clients.begin(); i != _clients.end(); i++)
+    {
+        Client client1 = *i;
+        if((client == client1.nom()) || (client == client1.id())){
+            client1.afficherClient();
+        }
+    }
+}
+
+void modifpannierclient(Client &client,Produit &produit, int quantite) {
+  client.modifierQuantiteProduit(produit, quantite);
+}
+
+void mettreAJourLaCommande(Commande &commande, bool valider) {
+  if (bool == true)
+    commande.delivered(bool valider);
+  else 
+    commande.delivered(bool false);
+}
+
+void ValiderLaCommande(Commande &commande) {
+  commande.delivered(bool true);
+}
+
+void Magasin::affichFullCommandes(){
+  for (auto i = _commandes.begin(); i != _commandes.end(); i++)
+    {
+        Commande commande = *i;
+        std::cout << commande << std::endl;
+    }
+}
+
+void Magasin::affichCommandesClient(Client client){
+  for (auto i = _commandes.begin(); i != _commandes.end(); i++)
+    {
+        Commande commande = *i;
+        if(commande.client() == client){
+          std::cout << commande << std::endl;
+        }
     }
 }

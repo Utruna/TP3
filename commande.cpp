@@ -14,7 +14,7 @@ std::vector<Produit> Commande::produits() const{
     return _produits;
 }
 
-bool Commande::delivered() const{
+bool Commande::delivered(bool valider); const{
     if (_delivered == true) {
         return true;
     }

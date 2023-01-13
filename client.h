@@ -4,9 +4,10 @@
 
 class Client {
     public:
-        Client(std::string nom, std::string prenom);
+        Client(std::string nom, std::string prenom, std::string id);
         std::string prenom() const;
         std::string nom() const;
+        std::string id() const;
         void updatePannier(Produit &produitAAjouter, int quantite);
         void voirPannier();
         void afficherClient();
@@ -19,6 +20,7 @@ class Client {
         std::vector<Produit> _pannier;
         std::string _prenom;
         std::string _nom;
+        std::string _id;
         int _quantitevoulu;
         
 };
