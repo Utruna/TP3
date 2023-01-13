@@ -18,5 +18,5 @@ bool Commande::delivered() const{
 }  
 
 std::ostream& operator<<(std::ostream& os, const Commande& commande) {
-    os << commande.client() << " a commandé " << commande.produits() << " et la commande est " << commande.delivered() << std::endl;
+    os << commande.client() << " a commande " << commande.produits() << " et la commande est " << commande.delivered() << std::endl;
 }

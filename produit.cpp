@@ -45,6 +45,6 @@ void Produit::updateQuantitevoulu(int nouvelleQuantitevoulu) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Produit& produit) {
-    os << "nom : " << produit.affichenom() << ", description : " << produit.affichedescription() << ", quantite : " << produit.affichequantite() << ", prix : " << produit.afficheprix() << " euro" << std::endl;
+    os << "nom : " << produit.nom() << ", description : " << produit.description() << ", quantite : " << produit.quantite() << ", prix : " << produit.prix() << " euro" << std::endl;
     return os;
 }

@@ -3,10 +3,14 @@
 
 int main() {
 	Produit p("Produit 1", "Description 1", 10, 10.5);
-	std::cout << p.affichenom() << std::endl;
-	std::cout << p.affichedescription() << std::endl;
-	std::cout << p.affichequantite() << std::endl;
-	std::cout << p.afficheprix() << std::endl;
+	/*
+	std::cout << p.nom() << std::endl;
+	std::cout << p.description() << std::endl;
+	std::cout << p.quantite() << std::endl;
+	std::cout << p.prix() << std::endl;
+	*/
+	std::cout << p << std::endl;
+	
 	p.updateQuantite(20);
 	p.updatePrix(20.50);
 	//std::cout << p.affichequantite() << std::endl;
