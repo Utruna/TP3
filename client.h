@@ -1,5 +1,3 @@
-#ifndef client_H
-#define client_H
 #include<iostream>
 #include<vector>
 #include "produit.h"
@@ -24,4 +22,3 @@ class Client {
         
 };
 std::ostream& operator<<(std::ostream& os, const Client& client);
-#endif
