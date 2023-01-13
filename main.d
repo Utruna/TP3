@@ -1,1 +1,1 @@
-main.o: main.cpp client.h produit.h
+main.o: main.cpp magasin.h commande.h client.h produit.h
