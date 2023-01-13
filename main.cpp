@@ -16,21 +16,23 @@ int main() {
 	//std::cout << p.afficheprix() << std::endl;
 	//std::cout << p ;
 	
-
+	
 	Produit p2("Produit 2", "Description 2", 20, 20.5);
 	Produit p3("Produit 3", "Description 3", 30, 30.5);
 	Client c("Nom", "Prenom");
 	c.updatePannier(p,1);
 	c.updatePannier(p2,10);
+	std::cout << p2 << std::endl;
 	c.updatePannier(p3,1);
-	//c.afficherClient();	
-	//c.voirPannier();
-	//p2.affichequantite();
+	c.afficherClient();	
+	c.voirPannier();
+	p2.quantite();
 	c.modifierQuantiteProduit(p2, 8);
-	//c.voirPannier();
+	c.voirPannier();
 	std::cout << p2 << std::endl;
 	c.retirerProduit(p2);
 	c.updatePannier(p,2);
+	std::cout << p2 << std::endl;
 
 	std::cout << "le pannier est composer de " << std::endl;
 	c.voirPannier();
@@ -39,5 +41,7 @@ int main() {
 	Commande commande1(c, c_ok);
 	std::cout << std::endl << std::endl << std::endl;
 	std::cout << commande1 << std::endl;
+	
+	
 	return 0;
 }
