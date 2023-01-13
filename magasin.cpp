@@ -1,8 +1,9 @@
+/*
 #include<iostream>
 #include "magasin.h"
 
 void Magasin::addProduit(Produit produit) {
-    _products.push_back(produit);
+    _produits.push_back(produit);
 }
 
 void Magasin::addClient(Client client) {
@@ -12,3 +13,4 @@ void Magasin::addClient(Client client) {
 void Magasin::addCommande(Commande commande) {
     _commandes.push_back(commande);
 }
+*/

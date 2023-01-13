@@ -23,5 +23,5 @@ class Client {
         int _quantitevoulu;
         
 };
-
+std::ostream& operator<<(std::ostream& os, const Client& client);
 #endif

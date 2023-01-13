@@ -6,10 +6,10 @@
 class Produit {
     public:
         Produit(std::string nom, std::string description, int quantite, float prix);
-        std::string affichenom() const;
-        std::string affichedescription() const;
-        int affichequantite() const;
-        float afficheprix() const;
+        std::string nom() const;
+        std::string description() const;
+        int quantite() const;
+        float prix() const;
         void updatePrix(float nouveauPrix);
         void updateQuantite(int nouvelleQuantite);
         void afficherProduit();

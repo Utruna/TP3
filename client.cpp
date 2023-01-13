@@ -65,3 +65,8 @@ void Client::retirerProduit(Produit &produitARetirer) {
     }
     _pannier=_pannier2;
 }
+
+std::ostream& operator<<(std::ostream& os, const Client& client) {
+    os << "nom : " << client.nom() << ", prenom : " << client.prenom() << std::endl;
+    return os;
+}

@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <vector>
 #include "commande.h"
@@ -14,3 +15,4 @@ class Magasin {
         std::vector<Produit> _produits;
         std::vector<Commande> _commandes;    
 };
+*/

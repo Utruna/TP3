@@ -4,19 +4,19 @@
 Produit::Produit(std::string nom, std::string description, int quantite, float prix) :
     _nom(nom), _description(description), _quantite(quantite), _prix(prix) {}
 
-std::string Produit::affichenom() const {
+std::string Produit::nom() const {
     return _nom;
 }
 
-std::string Produit::affichedescription() const {
+std::string Produit::description() const {
     return _description;
 }
 
-int Produit::affichequantite() const {
+int Produit::quantite() const {
     return _quantite;
 }
 
-float Produit::afficheprix() const {
+float Produit::prix() const {
     return _prix;
 }
 
@@ -32,10 +32,6 @@ void Produit::afficherProduit() {
     std::cout << "nom : " << _nom << ", description : " << _description << ", prix " << _prix  << " euro" << std::endl;
 }
 
-std::ostream& operator<<(std::ostream& os, const Produit& produit) {
-    os << "nom : " << produit.affichenom() << ", description : " << produit.affichedescription() << ", quantite : " << produit.affichequantite() << ", prix : " << produit.afficheprix() << " euro" << std::endl;
-    return os;
-}
 
 void Produit::updateQuantitevoulu(int nouvelleQuantitevoulu) {
     if (_quantite-nouvelleQuantitevoulu>0) {
@@ -46,4 +42,9 @@ void Produit::updateQuantitevoulu(int nouvelleQuantitevoulu) {
         std::cout << "la quantite demandee est superieure a la quantite disponible" << std::endl;
     }
     
+}
+
+std::ostream& operator<<(std::ostream& os, const Produit& produit) {
+    os << "nom : " << produit.affichenom() << ", description : " << produit.affichedescription() << ", quantite : " << produit.affichequantite() << ", prix : " << produit.afficheprix() << " euro" << std::endl;
+    return os;
 }
