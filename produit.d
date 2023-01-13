@@ -1,1 +1,1 @@
-produit.o: produit.cpp produit.h
+produit.o: produit.cpp produit.h magasin.h
