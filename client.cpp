@@ -2,7 +2,7 @@
 #include<vector>
 #include "client.h"
 
-Client::Client(std::string nom, std::string prenom, int id):
+Client::Client(std::string nom, std::string prenom, std::string id):
     _nom(nom), _prenom(prenom), _id(id) {
     }
 
@@ -14,7 +14,7 @@ std::string Client::nom() const {
     return _nom;
 }
 
-std::string Client::id(){
+std::string Client::id() const {
   return _id;
 }
 

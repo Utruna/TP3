@@ -82,14 +82,11 @@ void modifpannierclient(Client &client,Produit &produit, int quantite) {
 }
 
 void mettreAJourLaCommande(Commande &commande, bool valider) {
-  if (bool == true)
-    commande.delivered(bool valider);
-  else 
-    commande.delivered(bool false);
+    commande.etatbool(valider);
 }
 
 void ValiderLaCommande(Commande &commande) {
-  commande.delivered(bool true);
+    commande.etatbool(true);
 }
 
 void Magasin::affichFullCommandes(){
@@ -104,7 +101,8 @@ void Magasin::affichCommandesClient(Client client){
   for (auto i = _commandes.begin(); i != _commandes.end(); i++)
     {
         Commande commande = *i;
-        if(commande.client() == client){
+        std::string identifiant = commande.client().id();
+        if(identifiant == client.id()){
           std::cout << commande << std::endl;
         }
     }

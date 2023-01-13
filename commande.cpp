@@ -14,14 +14,18 @@ std::vector<Produit> Commande::produits() const{
     return _produits;
 }
 
-bool Commande::delivered(bool valider); const{
-    if (_delivered == true) {
-        return true;
+bool Commande::delivered() const{
+    return _delivered;
+    }
+
+void Commande::etatbool(bool valider) {
+    if (valider == true) {
+        _delivered = true;
     }
     else {
-        return false;
+        _delivered = false;
     }
-}  
+}
 
 std::ostream& operator<<(std::ostream& os, const Commande& commande) {
     os << "Client : " << commande.client() << " a commande " << std::endl;
@@ -31,7 +35,8 @@ std::ostream& operator<<(std::ostream& os, const Commande& commande) {
         os << produit << std::endl;
     }
     os << " et la commande est " ;
-    if (commande.delivered() == 1)
+    bool comparateur = commande.delivered();
+    if (comparateur == true)
         std::cout << "livrer" << std::endl;
     else
         std::cout << "non livrer" << std::endl;

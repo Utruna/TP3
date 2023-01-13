@@ -21,7 +21,7 @@ class Magasin {
         void mettreAJourLaCommande(Commande &commande, bool valider);
         void ValiderLaCommande(Commande &commande);
         void affichFullCommandes();
-        void affichCommandesClients(Client client);
+        void affichCommandesClient(Client client);
       
     private:
         std::vector<Client> _clients;
