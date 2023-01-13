@@ -1,3 +1,6 @@
+#ifndef commande_H
+#define commande_H
+
 #include <iostream>
 #include <vector>
 #include "client.h"
@@ -15,3 +18,5 @@ class Commande {
        std::vector<Produit> _produits;
        bool _delivered;
 };
+
+#endif

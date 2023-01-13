@@ -1,3 +1,5 @@
+#ifndef client_H
+#define client_H
 #include<iostream>
 #include<vector>
 #include "produit.h"
@@ -21,3 +23,5 @@ class Client {
         int _quantitevoulu;
         
 };
+
+#endif
