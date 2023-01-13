@@ -29,7 +29,7 @@ void Produit::updatePrix(float nouveauPrix) {
 }
 
 void Produit::afficherProduit() {
-    std::cout << "nom : " << _nom << ", description : " << _description << ", prix " << _prix  << " euro" << std::endl;
+    std::cout << "nom : " << _nom << ", description : " << _description << ", prix " << _prix  << " euro" << " quantite : " << _quantite << std::endl;
 }
 
 
