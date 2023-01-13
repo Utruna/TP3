@@ -1,14 +1,34 @@
 #include<iostream>
 #include "magasin.h"
 
-void Magasin::addProduit(Produit produit) {
-    _products.push_back(produit);
+std::vector<Client> Magasin::clients(){
+    return _clients;
+}
+std::vector<Produit> Magasin::produits(){
+    return _produits;
+}
+std::vector<Commande> Magasin::commandes(){
+    return _commandes;
 }
 
-void Magasin::addClient(Client client) {
-    _clients.push_back(client);
+void Magasin::addProduct(Produit produit){
+    _produits.push_back(produit);
 }
 
-void Magasin::addCommande(Commande commande) {
-    _commandes.push_back(commande);
+void Magasin::affichFullProduit(){
+    for (auto i = _produits.begin(); i != _produits.end(); i++)
+    {
+        Produit produit = *i;
+        produit.afficherProduit();
+    }    
+}
+
+void Magasin::affichProduit(std::string produit){
+    for (auto i = _produits.begin(); i != _produits.end(); i++)
+    {
+        Produit produit1 = *i;
+        Produit produitListe = produit1.
+        if(produit == )
+    }
+    
 }
