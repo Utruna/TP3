@@ -35,6 +35,10 @@ void Client::viderpannier() {
     _pannier.clear();
 }
 
+std::vector<Produit> Client::pannier() const {
+    return _pannier;
+}
+
 void Client::modifierQuantiteProduit(Produit &produitAModifier, int nouvelleQuantite) {
    std::vector<Produit> _pannier2;
     for (auto i = _pannier.begin(); i != _pannier.end(); i++) {

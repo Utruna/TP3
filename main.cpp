@@ -1,5 +1,6 @@
 #include<iostream>
 #include "magasin.h"
+#include "commande.h"
 
 int main() {
 
@@ -13,7 +14,7 @@ int main() {
 	std::cout << p.prix() << std::endl;
 	
 	std::cout << p << std::endl;
-	
+
 	p.updateQuantite(20);
 	p.updatePrix(20.50);
 	//std::cout << p.affichequantite() << std::endl;
@@ -34,6 +35,7 @@ int main() {
 	//c.voirPannier();
 	std::cout << p2 << std::endl;
 	c.retirerProduit(p2);
+<<<<<<< HEAD
 	//c.voirPannier();
 	std::cout << c << std::endl;*/
 
@@ -59,5 +61,16 @@ int main() {
 	m1.affichProduit("Produit 1");
 	
 
+/*
+	c.updatePannier(p,2);
+
+	std::cout << "le pannier est composer de " << std::endl;
+	c.voirPannier();
+	std::cout << c << std::endl;
+	bool c_ok = true;
+	Commande commande1(c, c_ok);
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << commande1 << std::endl;
+*/
 	return 0;
 }

@@ -1,7 +1,8 @@
 #include "commande.h"
 
-Commande::Commande(Client client, std::vector<Produit> produits, bool delivered):
-    _client(client), _produits(produits), _delivered(delivered) {
+Commande::Commande(Client client, bool delivered):
+    _client(client), _delivered(delivered) {
+        _produits = client.pannier();
     }
 
 
@@ -14,10 +15,25 @@ std::vector<Produit> Commande::produits() const{
 }
 
 bool Commande::delivered() const{
-    return _delivered;
+    if (_delivered == true) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }  
-/*
+
 std::ostream& operator<<(std::ostream& os, const Commande& commande) {
-    os << commande.client() << " a commande " << commande.produits() << " et la commande est " << commande.delivered() << std::endl;
+    os << "Client : " << commande.client() << " a commande " << std::endl;
+    auto produits = commande.produits();
+    for (auto i= produits.begin(); i != produits.end(); i++) {
+        Produit produit = *i;
+        os << produit << std::endl;
+    }
+    os << " et la commande est " ;
+    if (commande.delivered() == 1)
+        std::cout << "livrer" << std::endl;
+    else
+        std::cout << "non livrer" << std::endl;
+    return os;
 }
-*/

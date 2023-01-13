@@ -4,10 +4,10 @@
 
 class Commande {
     public:
-        Commande(Client client, std::vector<Produit> produits, bool delivered);
+        Commande(Client client, bool delivered);
         Client client() const;
         std::vector<Produit> produits() const;
-        bool delivered() const;    
+        bool delivered() const;
 
     private:
        Client _client;
