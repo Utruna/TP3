@@ -17,7 +17,7 @@ std::string Client::nom() const {
 void Client::updatePannier(Produit &produitAAjouter, int quantite) {
     for (int i=0 ; i<quantite ; i++)
         _pannier.push_back(produitAAjouter);
-        produitAAjouter.updateQuantitevoulu(produitAAjouter.affichequantite()-quantite);
+        produitAAjouter.updateQuantitevoulu(produitAAjouter.quantite()-quantite);
     
 }
 
@@ -38,8 +38,8 @@ void Client::viderpannier() {
 void Client::modifierQuantiteProduit(Produit &produitAModifier, int nouvelleQuantite) {
    std::vector<Produit> _pannier2;
     for (auto i = _pannier.begin(); i != _pannier.end(); i++) {
-        if (i->affichenom() == produitAModifier.affichenom()) {
-            produitAModifier.updateQuantite(produitAModifier.affichequantite()+1);
+        if (i->nom() == produitAModifier.nom()) {
+            produitAModifier.updateQuantite(produitAModifier.quantite()+1);
         }
         else {
             _pannier2.push_back(*(i));
@@ -47,7 +47,7 @@ void Client::modifierQuantiteProduit(Produit &produitAModifier, int nouvelleQuan
     }
     for (int i = 0; i<nouvelleQuantite; i++) {
         _pannier2.push_back(produitAModifier);
-        produitAModifier.updateQuantite(produitAModifier.affichequantite()-1);
+        produitAModifier.updateQuantite(produitAModifier.quantite()-1);
     }
     _pannier=_pannier2;
 
@@ -56,8 +56,8 @@ void Client::modifierQuantiteProduit(Produit &produitAModifier, int nouvelleQuan
 void Client::retirerProduit(Produit &produitARetirer) {
     std::vector<Produit> _pannier2;
     for (auto i = _pannier.begin(); i != _pannier.end(); i++) {
-        if (i->affichenom() == produitARetirer.affichenom()) {
-            produitARetirer.updateQuantite(produitARetirer.affichequantite()+1);
+        if (i->nom() == produitARetirer.nom()) {
+            produitARetirer.updateQuantite(produitARetirer.quantite()+1);
         }
         else {
             _pannier2.push_back(*(i));
