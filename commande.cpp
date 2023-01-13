@@ -5,12 +5,18 @@ Commande::Commande(Client client, std::vector<Produit> produits, bool delivered)
     }
 
 
- Client Commande::client(){
+ Client Commande::client() const{
     return _client;
  }
-std::vector<Produit> Commande::produits(){
+
+std::vector<Produit> Commande::produits() const{
     return _produits;
 }
-bool Commande::delivered(){
+
+bool Commande::delivered() const{
     return _delivered;
 }  
+
+std::ostream& operator<<(std::ostream& os, const Commande& commande) {
+    os << commande.client() << " a commandé " << commande.produits() << " et la commande est " << commande.delivered() << std::endl;
+}
