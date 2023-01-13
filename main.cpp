@@ -1,6 +1,5 @@
 #include<iostream>
-#include "client.h"
-
+#include "commande.h"
 int main() {
 	Produit p("Produit 1", "Description 1", 10, 10.5);
 	/*
@@ -10,7 +9,7 @@ int main() {
 	std::cout << p.prix() << std::endl;
 	*/
 	std::cout << p << std::endl;
-	
+
 	p.updateQuantite(20);
 	p.updatePrix(20.50);
 	//std::cout << p.affichequantite() << std::endl;
@@ -31,7 +30,14 @@ int main() {
 	//c.voirPannier();
 	std::cout << p2 << std::endl;
 	c.retirerProduit(p2);
-	//c.voirPannier();
+	c.updatePannier(p,2);
+
+	std::cout << "le pannier est composer de " << std::endl;
+	c.voirPannier();
 	std::cout << c << std::endl;
+	bool c_ok = true;
+	Commande commande1(c, c_ok);
+	std::cout << std::endl << std::endl << std::endl;
+	std::cout << commande1 << std::endl;
 	return 0;
 }
