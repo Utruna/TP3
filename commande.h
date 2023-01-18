@@ -7,8 +7,8 @@ class Commande {
         Commande(Client client, bool delivered);
         Client client() const;
         std::vector<Produit> produits() const;
-        bool delivered() const;
-        void etatbool(bool valider);
+        bool delivered(Client client) const;
+        void etatbool(Client client, bool valider);
 
     private:
        Client _client;

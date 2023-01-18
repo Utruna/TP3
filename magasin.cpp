@@ -86,11 +86,13 @@ void modifpannierclient(Client &client,Produit &produit, int quantite) {
 }
 
 void mettreAJourLaCommande(Commande &commande, bool valider) {
-    commande.etatbool(valider);
+    Client client = commande.client();
+    commande.etatbool(client, valider);
 }
 
 void ValiderLaCommande(Commande &commande) {
-    commande.etatbool(true);
+    Client client = commande.client();
+    commande.etatbool(client, true);
 }
 
 void Magasin::affichFullCommandes(){
