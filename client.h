@@ -15,6 +15,7 @@ class Client {
         void modifierQuantiteProduit(Produit &produitAAjouter, int quantite);
         void retirerProduit(Produit &produitARetirer);
         std::vector<Produit> pannier() const;
+        //void pannierdefinitif();
 
     private:
         std::vector<Produit> _pannier;

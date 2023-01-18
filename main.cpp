@@ -44,7 +44,7 @@ int main() {
 	Produit p2("Produit 2", "Description 2", 20, 20.5);
 	Produit p3("Produit 3", "Description 3", 30, 30.5);
 
-	Client c1("Nom 1", "Prenom 1", "id1");
+	Client c1("FLorent", "ètrofeaurt", "id1");
 	Client c2("Nom 2", "Prenom 2", "id2");
 	
 	Magasin m1;
@@ -55,10 +55,18 @@ int main() {
 	m1.addClient(c1);
 	m1.addClient(c2);
 
-	m1.affichFullProduit();
-	m1.affichProduit("Produit 1");
+	c1.updatePannier(p,1);
+	c1.updatePannier(p2,3);
+	c1.updatePannier(p3,1);
+	c1.modifierQuantiteProduit(p2,2);
+	//m1.affichFullProduit();
+	//m1.affichProduit("Produit 1");
 	m1.updateStockProduit(p,85);
-	m1.affichProduit("Produit 1");
+	//m1.affichProduit("Produit 1");
+	Commande commande1(c1, false);
+	m1.addCommande(commande1);
+	m1.affichFullCommandes();
+	m1.affichFullProduit();
 	
 
 /*
@@ -73,5 +81,7 @@ int main() {
 	std::cout << std::endl << std::endl << std::endl;
 	std::cout << commande1 << std::endl;
 */
+
+	
 	return 0;
 }
