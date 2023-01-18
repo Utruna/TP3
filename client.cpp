@@ -78,3 +78,30 @@ std::ostream& operator<<(std::ostream& os, const Client& client) {
     os << "nom : " << client.nom() << ", prenom : " << client.prenom() << std::endl;
     return os;
 }
+/*
+void Client::pannierdefinitif() {
+    int i = 1;
+    int j = 0;
+    std::vector<Produit> _templist;
+    std::vector<int> _quantite;
+    _templist.push_back(_pannier[0]);
+    _quantite.push_back(1);
+    while (i < int (_pannier.size())) {
+        if (_templist[i].nom() == _pannier[i].nom()) {
+            _quantite[j] = _quantite[j] + 1;
+        }
+        else {
+            j++;
+            _templist.push_back(_pannier[i]);
+            _quantite.push_back(1);
+        }
+        i++;
+    }
+    std::cout << _templist.size() << std::endl;
+    std::cout << _quantite.size() << std::endl;
+    /*
+    for (int i = 0; i < _templist.size(); i++) {
+        std::cout << _templist[i].nom() << " " << _quantite[i] << std::endl;
+    }
+}
+*/

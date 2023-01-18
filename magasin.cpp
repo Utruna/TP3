@@ -6,9 +6,11 @@ Magasin::Magasin(){}
 void Magasin::addProduct(Produit produit){
     _produits.push_back(produit);
 }
+
 void Magasin::addClient(Client client){
     _clients.push_back(client);
 }
+
 void Magasin::addCommande(Commande commande){
     _commandes.push_back(commande);    
 }
@@ -21,6 +23,7 @@ void Magasin::affichFullProduit(){
     }    
 }
 
+
 void Magasin::affichProduit(std::string produit){
     for (auto i = _produits.begin(); i != _produits.end(); i++)
     {
@@ -31,6 +34,7 @@ void Magasin::affichProduit(std::string produit){
     }
     
 }
+
 
 void deletProduitPannier(Client &client, Produit &produit) {
       std::vector<Produit> _pannier = client.pannier();
