@@ -42,3 +42,29 @@ std::ostream& operator<<(std::ostream& os, const Commande& commande) {
         std::cout << "non livrer" << std::endl;
     return os;
 }
+
+/*std::ostream& operator<<(std::ostream& os, const Commande& commande) {
+    os << "Client : " << commande.client() << " a commande " << std::endl;
+    auto produits = commande.produits();
+    int j = 0;
+    for (auto i= produits.begin(); i != produits.end(); i++) {
+        Produit produit = *i;
+        Produit produitApres = *(i+1);
+        do{
+            Produit produit = *i;
+            Produit produitApres = *(i+1);
+           j++;
+           i+=j;
+        }while(produit.nom() == produitApres.nom());
+
+        os << produit << " Quantite : " << j << std::endl;
+        j = 0;
+    }
+    os << " et la commande est " ;
+    bool comparateur = commande.delivered();
+    if (comparateur == true)
+        std::cout << "livrer" << std::endl;
+    else
+        std::cout << "non livrer" << std::endl;
+    return os;
+}*/

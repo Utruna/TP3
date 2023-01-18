@@ -1,5 +1,5 @@
 #include<iostream>
-#include "magasin.h"
+#include "magasin.h"  
 
 int main() {
 
@@ -55,10 +55,18 @@ int main() {
 	m1.addClient(c1);
 	m1.addClient(c2);
 
-	m1.affichFullProduit();
-	m1.affichProduit("Produit 1");
+	c1.updatePannier(p,1);
+	c1.updatePannier(p2,3);
+	c1.updatePannier(p3,1);
+
+	//m1.affichFullProduit();
+	//m1.affichProduit("Produit 1");
 	m1.updateStockProduit(p,85);
-	m1.affichProduit("Produit 1");
+	//m1.affichProduit("Produit 1");
+
+	Commande commande(c1, false);
+	m1.addCommande(commande);
+	m1.affichFullCommandes();
 	
 
 /*

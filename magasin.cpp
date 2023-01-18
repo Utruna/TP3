@@ -94,6 +94,7 @@ void Magasin::affichFullCommandes(){
     {
         Commande commande = *i;
         std::cout << commande << std::endl;
+        
     }
 }
 
